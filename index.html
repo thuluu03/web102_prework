@@ -46,6 +46,37 @@
             <h3>🥈 Runner Up</h3>
         </div>
     </div>
+    <h2>Fund Here!</h2>
+    <div class="fund-container">
+        <div id="button-container">
+            <button id="fund-btn">Fund</button>
+
+            <div class="popup" id="fund-popup">
+                <div class="popup-inner" id="fund-inner">
+                    <button id="fund-close-btn" type="button">Close</button>
+                    <p>Choose a game you would like to fund</p>
+                    <!-- include drop down box to select a game to fund-->
+                     <select class="dropdown fund-input" id="game-dropdown">
+                        <option value="" disabled selected>Select a game</option>
+                     </select>
+                    <form name="fund-form" id="fund-form">
+                        <p>Email</p>
+                        <input class="fund-input" type="text" id="fund-email" placeholder="123@email.com"/>
+                        <p>Choose an amount</p>
+                        $<input class="fund-input" type="number" id="fund-amount" />usd
+                    </form>
+                    <button id="fund-submit-btn" type="button">Submit</button>
+                </div>
+            </div>
+            <div class="popup" id="pledge-popup">
+                <div class="popup-inner">
+                    <p>Thank you for pledging!</p>
+                    <p>An email will be sent out shortly with your next steps</p>
+                    <button id="pledge-close-btn" type="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- list of games funded by Sea Monster -->
     <h2>Our Games</h2>
