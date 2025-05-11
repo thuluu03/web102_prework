@@ -23,10 +23,10 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with [Kap](https://getkap.co/) 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -34,7 +34,9 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I encountered many challenges when attempting to implement the popup when clicking on the fund button. Currently, I keep two popups hidden upon loading the screen, based on the buttons clicked (either close or submit) it will close the popup or trigger the other to appear. When trying to implement this feature, the popups would not behave like how I wanted. 
+- First, they were not centered. I figured out that I should assign two classes to the popup divs, one indicating that it is a popup and another class to claim whether it is an active popup or not. Then within the CSS, I wanted to use flexbox to center the popup. To keep the popups hidden, I kept the default display as none, but justify-content as center. Then when the popup has an active class, its display will be overriden to be flex, allowing the popup to stay centered. 
+- Another issue I encountered was that clicking submit would not trigger the second popup to show. By looking through console error messages when inspecting element on the page, I figured out that this was due to the fact that I had never given an id to one of my components, yet I was calling `document.getElementbyID` which would stop the remainder of the script from running, including adding an event listener to my submit button.
 
 ## License
 
